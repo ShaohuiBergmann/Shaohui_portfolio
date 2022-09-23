@@ -61,7 +61,7 @@ function Header({}: Props) {
                     fgColor="rgb(249,210,228)"
                     bgColor="transparent"
                 />
-                <p className="uppercase hidden md:inline-flex text-md text-rosepink">
+                <p className="uppercase hidden md:inline-flex text-md text-[rgb(249,210,228)]">
                     Contact Me
                 </p>
             </motion.div>

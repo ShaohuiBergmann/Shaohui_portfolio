@@ -6,9 +6,6 @@ module.exports = {
     ],
     theme: {
         extend: {},
-        colors: {
-            rosepink: "#F9D2E4",
-        },
     },
     plugins: [],
 };
