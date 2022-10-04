@@ -9,7 +9,7 @@ import Projects from "../components/Projects";
 import ContactMe from "../components/ContactMe";
 const Home: NextPage = () => {
     return (
-        <div className="bg-[rgb(1,132,127)]  h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 ">
+        <div className="bg-[rgb(1,132,127)]  h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[rgb(249,210,228)]">
             <Head>
                 <title>Shaohui's Portfolio</title>
             </Head>
@@ -35,9 +35,9 @@ const Home: NextPage = () => {
                 <Projects />
             </section>
             {/*Contact*/}
-        <section id="contact" className="snap-start">
-            <ContactMe />
-        </section>
+            <section id="contact" className="snap-start">
+                <ContactMe />
+            </section>
         </div>
     );
 };

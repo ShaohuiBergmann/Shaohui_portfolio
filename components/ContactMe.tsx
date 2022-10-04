@@ -24,7 +24,7 @@ function ContactMe({}: Props) {
                     I have got just what you want.{" "}
                     <span className="underline">Let's Talk</span>
                 </h4>
-                <div className="space-y-10">
+                <div className="space-y-10 text-[rgb(249,210,228)]">
                     <div className="flex items-center space-x-5 justify-center">
                         <PhoneIcon className=" text-[rgb(249,210,228)] h-7 w-7 animate-pulse" />
                         <p className="text-2xl">+491773528581</p>
