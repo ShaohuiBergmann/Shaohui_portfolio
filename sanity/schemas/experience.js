@@ -13,7 +13,8 @@ export default {
                 hotspot: true,
             },
         },
-        { name: "workPeriod", title: "WorkPeriod", type: "date" },
+        { name: "dateStarted", title: "DateStarted", type: "date" },
+        { name: "dateEnded", title: "DateEnded", type: "date" },
         {
             name: "points",
             title: "Points",
