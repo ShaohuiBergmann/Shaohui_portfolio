@@ -1,9 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { PageInfo } from "../typing";
+import { urlFor } from "../sanity";
 
-type Props = {};
+type Props = { pageInfo: PageInfo };
 
-function About({}: Props) {
+function About({ pageInfo }: Props) {
     return (
         <motion.div
             initial={{
@@ -27,24 +29,16 @@ function About({}: Props) {
                 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                src="/makeupMe.JPG"
+                src={urlFor(pageInfo?.profilePic).url()}
                 alt="Patience"
-                className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 object-cover rounded-full md:rounded-lg md:h-95 xl:w-[500px] xl:h-[600px] "
+                className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 object-cover rounded-full md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px] "
             />
             <div className="space-y-10 px-0 md:px-10">
-                <h4 className="text-[#F9D2E4] text-4xl font-semibold">
+                <h4 className="text-[#F9D2E4] text-4xl font-semibold ">
                     What's about me.
                 </h4>
                 <p className="text-xl text-[#FECCC8]">
-                    I recently graduated from a &nbsp;
-                    <span className="underline decoration-[#F9D2E4] ">
-                        12-week-long Full Stack Web Development bootcamp
-                    </span>
-                    , I’m able to build web apps using modern web development
-                    technologies. I'm multilingual, a teamplayer, have great
-                    communication skills. Currently I’m looking for an
-                    opportunity to grow full web development skills in an
-                    innovative environment.
+                    {pageInfo?.backgroundInfo}
                 </p>
             </div>
         </motion.div>
