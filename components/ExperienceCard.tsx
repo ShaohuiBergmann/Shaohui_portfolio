@@ -1,16 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Experience } from "../typing";
-type Props = { experiences: Experience[] };
+import { urlFor } from "../sanity";
 
-function ExperienceCard({ experiences }: Props) {
+type Props = { experience: Experience };
+
+function ExperienceCard({ experience }: Props) {
     return (
         <article
             className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#F9D2E4] p text-[rgb(1,132,127)]
         hover:opacity-100 opacity-60 cursor-pointer transition-opacity duration-200 overflow-hidden "
         >
-            {/* {experiences.map((experience)=>(<motion.img
-            key={experience._id}
+            <motion.img
                 initial={{
                     y: -100,
                     opacity: 0,
@@ -23,27 +24,24 @@ function ExperienceCard({ experiences }: Props) {
                     y: 0,
                 }}
                 viewport={{ once: true }}
-                className="h-32 w-32 rounded-full xl:h-[200px] xl:w-[200px] object-cover "
-                src={experience?.companyImg}
+                className="mt-5 h-32 w-32 rounded-full xl:h-[200px] xl:w-[200px] object-cover "
+                src={urlFor(experience?.companyImg).url()}
                 alt="Patience"
             />
             <div className="px-0 md:px-10">
-                <h4 className="uppercase text-4xl font-light mt-2">
-                    {experience?.jobTitle}
+                <h4 className="uppercase text-2xl font-light mt-2">
+                    {experience.jobTitle}
                 </h4>
-                <p className="mt-2"> {experience?.dateStarted} –  {experience?.dateEnded}</p>
-                <p className="font-bold text-2xl mt-2">
-                    {experience?.compony}
+                <p className="mt-2">{experience.compony} </p>
+                <p className="font-bold text-lg mt-2">
+                    {experience.dateStarted} - {experience.dateEnded}
                 </p>
-                <ul className="list-disc mt-2  ml-5 text-lg">
-                    <li>
-                         {experience?.points[0]}
-                    </li>
-                    <li className="mt-2 mb-5">
-                        {experience?.points[1]}
-                    </li>
+                <ul className="list-disc mt-2  ml-5 text-lg h-40">
+                    {experience.points.map((point, i) => (
+                        <li key={i} className="mt-2 mb-5">{point}</li>
+                    ))}
                 </ul>
-            </div>))} */}
+            </div>
         </article>
     );
 }

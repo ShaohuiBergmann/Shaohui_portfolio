@@ -3,10 +3,7 @@ import { groq } from "next-sanity";
 import { sanityClient } from "../../sanity";
 import { Experience } from "../../typing";
 
-const query = groq`*[_type=="experience"] {
-  ...,
-  technologies[]->
-}`;
+const query = groq`*[_type=="experience"]`;
 type Data = {
     experiences: Experience[];
 };
