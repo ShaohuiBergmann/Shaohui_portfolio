@@ -14,13 +14,13 @@ function Projects({ projects }: Props) {
                 Projects
             </h3>
             <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[rgb(249,210,228)]  text-[rgb(249,210,228)] ">
-                {projects?.map((project, i) => (
+                {projects?.reverse().map((project, i) => (
                     <div
                         key={project?._id}
                         className="w-screen flex-shrink-0 snap-center flex flex-col space-y-3 items-center justify-center p-20 md:p-44 h-screen"
                     >
                         <motion.img
-                            className="h-[600px] w-[600px] object-cover "
+                            className="mt-20 h-[300px] w-[300px] object-cover md:h-[600px] md:w-[600px] md:mt-0 "
                             initial={{
                                 y: -300,
                             }}
@@ -37,7 +37,7 @@ function Projects({ projects }: Props) {
                             src={urlFor(project?.image).url()}
                         />
                         <div className="text-white space-y-10 px-0 md:px-10 max-w-6xl">
-                            <h4 className="m-3 text-4xl font-semibold text-center">
+                            <h4 className="m-3 text-xl font-semibold text-center md:text-4xl">
                                 <span className="m-3 ">
                                     Case Study {i + 1} of {projects.length}:{" "}
                                 </span>
@@ -49,10 +49,10 @@ function Projects({ projects }: Props) {
                                     {project?.title}
                                 </a>
                             </h4>
-                            <div className="flex items-center space-x-2 justify-center">
+                            <div className="flex flex-wrap max-h-24 overflow-y-scroll items-center space-y-1 space-x-2 justify-center md:overflow-y-hidden">
                                 {project?.technologies.map((technology) => (
                                     <img
-                                        className="h-10 w-10 "
+                                        className="h-10 w-10 object-cover "
                                         key={technology._id}
                                         src={urlFor(technology.image).url()}
                                         alt={technology?.title}
@@ -60,7 +60,7 @@ function Projects({ projects }: Props) {
                                 ))}
                             </div>
 
-                            <p className="text-lg text-center md:text-left">
+                            <p className="text-lx max-h-48 overflow-y-scroll text-center  md:text-left md:overflow-y-hidden md:text-2lg">
                                 {project?.summary}
                             </p>
                         </div>
