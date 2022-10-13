@@ -1,5 +1,5 @@
 import React from "react";
-import { PhoneIcon, MapPinIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
+import { EnvelopeIcon } from "@heroicons/react/24/solid";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { PageInfo } from "../typing";
 type Inputs = {
@@ -25,18 +25,6 @@ function ContactMe({ pageInfo }: Props) {
                     <span className="underline">Let&apos; Talk</span>
                 </h4>
                 <div className="space-y-10 text-[rgb(249,210,228)]">
-                    <div className="flex items-center space-x-5 justify-center">
-                        <PhoneIcon className=" text-[rgb(249,210,228)] h-7 w-7 animate-pulse" />
-                        <p className="text-lg md:text-2xl">
-                            {pageInfo.phoneNumber}
-                        </p>
-                    </div>
-                    <div className="flex items-center space-x-5 justify-center">
-                        <MapPinIcon className=" text-[rgb(249,210,228)] h-7 w-7 animate-pulse" />
-                        <p className="text-lg md:text-2xl">
-                            {pageInfo.address}
-                        </p>
-                    </div>
                     <div className="flex items-center space-x-5 justify-center">
                         <EnvelopeIcon className=" text-[rgb(249,210,228)] h-7 w-7 animate-pulse" />
                         <p className="text-lg md:text-2xl">{pageInfo.email}</p>

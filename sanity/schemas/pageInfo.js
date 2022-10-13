@@ -22,9 +22,7 @@ export default {
                 hotspot: true,
             },
         },
-        { name: "phoneNumber", title: "PhoneNumber", type: "string" },
         { name: "email", title: "Email", type: "string" },
-        { name: "address", title: "Address", type: "string" },
         {
             name: "socials",
             title: "Socials",
