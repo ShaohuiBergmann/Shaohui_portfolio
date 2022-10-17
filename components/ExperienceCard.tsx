@@ -36,7 +36,7 @@ function ExperienceCard({ experience }: Props) {
                 <p className="text-sm font-bold md:text-lg mt-2">
                     {experience.dateStarted} - {experience.dateEnded}
                 </p>
-                <ul className="list-disc mt-2 ml-5 text-sm h-40 md:text-xl">
+                <ul className=" mt-2 ml-5 text-sm h-40 md:text-xl md:list-disc">
                     {experience.points.map((point, i) => (
                         <li key={i} className="mt-2 mb-5">
                             {point}

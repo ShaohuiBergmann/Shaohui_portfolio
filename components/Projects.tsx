@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Project } from "../typing";
 import { urlFor } from "../sanity";
+import Image from "next/image";
 
 type Props = {
     projects: Project[];
@@ -20,7 +21,7 @@ function Projects({ projects }: Props) {
                         className="w-screen flex-shrink-0 snap-center flex flex-col space-y-3 items-center justify-center p-20 md:p-44 h-screen"
                     >
                         <motion.img
-                            className="mt-20 h-[300px] w-[300px] object-cover md:h-[600px] md:w-[600px] md:mt-0 "
+                            className="mt-20 h-[150px] w-[150px] object-cover md:h-[400px] md:w-[400px] "
                             initial={{
                                 y: -300,
                             }}
@@ -45,22 +46,27 @@ function Projects({ projects }: Props) {
                                     href={project?.linkToBuild}
                                     className="underline decoration-[rgb(249,210,228)]"
                                 >
-                                    {" "}
                                     {project?.title}
                                 </a>
                             </h4>
                             <div className="flex flex-wrap max-h-24 overflow-y-scroll items-center space-y-1 space-x-2 justify-center md:overflow-y-hidden">
                                 {project?.technologies.map((technology) => (
-                                    <img
-                                        className="h-10 w-10 object-cover "
+                                    <span
+                                        className="relative h-10 w-10"
                                         key={technology._id}
-                                        src={urlFor(technology.image).url()}
-                                        alt={technology?.title}
-                                    />
+                                    >
+                                        <Image
+                                            className="h-10 w-10 object-cover "
+                                            layout="fill"
+                                            key={technology._id}
+                                            src={urlFor(technology.image).url()}
+                                            alt={technology?.title}
+                                        />
+                                    </span>
                                 ))}
                             </div>
 
-                            <p className="text-lx max-h-48 overflow-y-scroll text-center  md:text-left md:overflow-y-hidden md:text-2lg">
+                            <p className="text-lx max-h-48 overflow-y-scroll text-center  md:text-left md:text-2xl md:overflow-y-hidden md:text-2lg">
                                 {project?.summary}
                             </p>
                         </div>
