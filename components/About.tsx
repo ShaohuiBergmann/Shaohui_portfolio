@@ -31,7 +31,7 @@ function About({ pageInfo }: Props) {
                 viewport={{ once: true }}
                 src={urlFor(pageInfo?.profilePic).url()}
                 alt="Patience"
-                className="-mb-20 md:mb-0 flex-shrink-0 w-48 h-48  object-cover rounded-full md:rounded-lg md:w-56 md:h-95 xl:w-[500px] xl:h-[600px] "
+                className="-mb-14 mt-14 md:mb-0 flex-shrink-0 w-48 h-48  object-cover rounded-full md:rounded-lg md:w-56 md:h-95 xl:w-[500px] xl:h-[600px] "
             />
             <div className="space-y-10 px-0 md:px-10">
                 <h4 className="invisible md:visible text-[#F9D2E4] text-4xl font-semibold ">
