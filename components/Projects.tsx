@@ -21,7 +21,7 @@ function Projects({ projects }: Props) {
                         className="w-screen flex-shrink-0 snap-center flex flex-col space-y-3 items-center justify-center p-20 md:p-44 h-screen"
                     >
                         <motion.img
-                            className="mt-20 h-[150px] w-[150px] object-cover md:h-[400px] md:w-[400px] "
+                            className="mt-20 h-[100px] w-[100px] object-cover md:h-[400px] md:w-[400px] "
                             initial={{
                                 y: -300,
                             }}
