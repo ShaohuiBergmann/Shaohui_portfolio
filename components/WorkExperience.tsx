@@ -19,7 +19,7 @@ function WorkExperience({ experiences }: Props) {
             <h3 className="absolute top-20 bottom-3 uppercase tracking-[20px] text-[rgb(249,210,228)]/70 text-2xl">
                 Experience
             </h3>
-            <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[rgb(249,210,228)]">
+            <div className="w-full mt-16 flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[rgb(249,210,228)]">
                 {experiences?.map((experience) => (
                     <ExperienceCard
                         key={experience._id}

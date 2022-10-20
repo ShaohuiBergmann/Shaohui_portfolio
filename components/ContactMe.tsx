@@ -21,7 +21,7 @@ function ContactMe({ pageInfo }: Props) {
                 Contact
             </h3>
             <div className="flex flex-col space-y-10">
-                <h4 className="text-[rgb(249,210,228)] text-2xl mt-14 md:text-4xl font-semibold text-center">
+                <h4 className="text-[rgb(249,210,228)] text-2xl mt-16 md:text-4xl font-semibold text-center">
                     <span className="underline">Let&apos; Talk</span>
                 </h4>
                 <div className="space-y-10 text-[rgb(249,210,228)]">
