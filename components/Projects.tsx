@@ -11,7 +11,7 @@ type Props = {
 function Projects({ projects }: Props) {
     return (
         <div className="h-screen relative flex  overflow-hidden flex-col text-left md:flex-row mx-w-full justify-evenly mx-auto items-center z-0 ">
-            <h3 className="absolute top-20 uppercase tracking-[20px] text-[rgb(249,210,228)]/70 text-2xl">
+            <h3 className="absolute top-20 bottom-3 uppercase tracking-[20px] text-[rgb(249,210,228)]/70 text-2xl">
                 Projects
             </h3>
             <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[rgb(249,210,228)]  text-[rgb(249,210,228)] ">
@@ -21,7 +21,7 @@ function Projects({ projects }: Props) {
                         className="w-screen flex-shrink-0 snap-center flex flex-col space-y-3 items-center justify-center p-20 md:p-44 h-screen"
                     >
                         <motion.img
-                            className="mt-20 h-[100px] w-[100px] object-cover md:h-[400px] md:w-[400px] "
+                            className="mt-40 h-[100px] w-[100px] object-cover md:mt-20 md:h-[400px] md:w-[400px] "
                             initial={{
                                 y: -300,
                             }}

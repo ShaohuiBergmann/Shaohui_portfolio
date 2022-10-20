@@ -17,7 +17,7 @@ function About({ pageInfo }: Props) {
             }}
             className="flex flex-col relative h-screen text-center md:text-left md:flex-row mx-w-7xl px-10 justify-center mx-auto items-center "
         >
-            <h3 className="absolute top-20 uppercase tracking-[20px] text-[rgb(249,210,228)]/70 text-2xl">
+            <h3 className="absolute top-20 bottom-3 uppercase tracking-[20px] text-[rgb(249,210,228)]/70 text-2xl">
                 About
             </h3>
             <motion.img
