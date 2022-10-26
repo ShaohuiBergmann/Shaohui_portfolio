@@ -52,16 +52,18 @@ function Header({ socials }: Props) {
                 }}
                 className="flex flex-row items-center text-gray-300 cursor-pinter"
             >
-                <SocialIcon
-                    className="cursor-pointer"
-                    network="email"
-                    fgColor="rgb(249,210,228)"
-                    bgColor="transparent"
-                />
                 <Link href="#contact">
-                    <p className="uppercase hidden md:inline-flex text-md text-[rgb(249,210,228)] cursor-pointer">
-                        Contact Me
-                    </p>
+                    <div>
+                        <SocialIcon
+                            className="cursor-pointer"
+                            network="email"
+                            fgColor="rgb(249,210,228)"
+                            bgColor="transparent"
+                        />
+                        <p className="uppercase hidden md:inline-flex text-md text-[rgb(249,210,228)] cursor-pointer">
+                            Contact Me
+                        </p>
+                    </div>
                 </Link>
             </motion.div>
         </header>
