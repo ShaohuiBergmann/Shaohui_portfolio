@@ -17,11 +17,11 @@ function ContactMe({ pageInfo }: Props) {
     };
     return (
         <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl justify-evenly mx-auto items-center ">
-            <h3 className="absolute top-20 bottom-3 uppercase tracking-[20px] text-[rgb(249,210,228)]/70 text-2xl">
+            <h3 className="absolute h-10 top-20 bottom-3 uppercase tracking-[20px] text-[rgb(249,210,228)]/70 text-2xl">
                 Contact
             </h3>
             <div className="flex flex-col space-y-10">
-                <h4 className="text-[rgb(249,210,228)] text-2xl mt-16 md:text-4xl font-semibold text-center">
+                <h4 className="text-[rgb(249,210,228)] text-2xl mt-16 md:text-4xl font-semibold text-center ">
                     <span className="underline">Let&apos; Talk</span>
                 </h4>
                 <div className="space-y-10 text-[rgb(249,210,228)]">
